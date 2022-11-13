@@ -22,3 +22,4 @@ consign({})
 app.listen(process.env.PORT, () => {
     console.log(`Server running at http://localhost:${process.env.PORT}`);
 })
+console.log('CCSM Vagas')
