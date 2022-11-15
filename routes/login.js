@@ -6,4 +6,5 @@ module.exports = (app) => {
     })
 
     app.get('/login', login.login)
+    app.post('/login', login.loginVerify)
 }
