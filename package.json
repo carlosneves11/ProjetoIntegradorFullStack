@@ -1,0 +1,33 @@
+{
+  "name": "ccsm-vagas",
+  "version": "1.0.0",
+  "description": "Site de oportunidades de empregos",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosneves11/ProjetoIntegradorFullStack.git"
+  },
+  "author": "Carolina Diniz, Sebastião Cazeia, Carlos Neves, Marcelo Cromack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosneves11/ProjetoIntegradorFullStack/issues"
+  },
+  "homepage": "https://github.com/carlosneves11/ProjetoIntegradorFullStack#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "consign": "^0.1.6",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20"
+  }
+}
