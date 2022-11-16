@@ -11,7 +11,6 @@ module.exports = (app) => {
             res.end()
         }
     }
-    
 
     return RegisterController
 }

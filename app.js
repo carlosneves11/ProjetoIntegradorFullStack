@@ -7,7 +7,6 @@ const session = require('express-session');
 const path = require('path');
 const app = express();
 
-
 // Views
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
