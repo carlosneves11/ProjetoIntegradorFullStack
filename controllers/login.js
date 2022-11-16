@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+
 module.exports = (app) => {
     const LoginControllers = {
         login: (req, res, next) => {
