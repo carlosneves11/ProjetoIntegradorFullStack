@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 // Consign
 consign({})
-.include('')
+.include('models')
 .then('controllers')
 .then('routes')
 .into(app)
