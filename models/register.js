@@ -1,14 +1,15 @@
 const mongoose = require('mongoose')
 
 module.exports = () => {
-    const Users = mongoose.model('Users', {
-        id_profile : String,
-        id_messages : String,
-        id_posts : String,
-        id_jobs : String,
-        id_cofiguration: String,
-        email : String,
+    const registerModel = mongoose.model('Users', {
+        profile: Object,
+        posts: Object,
+        jobs: Object,   
+        configurations: Object,
+        email: String,
+        notifications: Object,
+        created_at: String,
     })
 
-    return Users
+    return registerModel
 }
