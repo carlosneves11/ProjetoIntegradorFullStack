@@ -4,8 +4,11 @@ const jwt = require('jsonwebtoken');
 module.exports = (app) => {
     const LoginControllers = {
         login: (req, res, next) => {
-            console.log(req.session)
-            res.render('login')
+            if(req.session.token === undefined) {
+                res.render('login')
+            } else {
+                res.redirect('/jobs')
+            }
         },
         loginVerify: (req, res, next) => {
             const { email, password } = req.body
@@ -31,6 +34,10 @@ module.exports = (app) => {
                     })
                 }
             })
+        },
+        logout: (req, res, next) => {
+            req.session.token = undefined
+            res.redirect('/login')
         }
     }
     return LoginControllers
