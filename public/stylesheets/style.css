@@ -16,8 +16,9 @@ body {
 
 .main-container {
     width: 590px;
+    height: 400px;
 }
 
-.ad-containner {    
-
+.ad-containner { 
+    height: 400px;   
 }
