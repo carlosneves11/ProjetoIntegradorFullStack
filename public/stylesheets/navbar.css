@@ -10,6 +10,10 @@ header {
     border-bottom: 1px solid #eee;
 }
 
+.clear {
+    clear: both;
+}
+
 .logo {
     float: left;
     position: relative;
