@@ -1,0 +1,67 @@
+/* NAV BAR */
+header {
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    background-color: #fff;
+    padding-top: 6px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.elipse-nav {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid rgb(215, 215, 215);
+}
+
+.profile-nav {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.notifications-nav, .messages-nav {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notifications-nav {
+    left: 1px;
+}
+
+.small-elipse-nav {
+    position: relative;
+    top: -13px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #B51C19;
+}
+
+#small-elipse-profile {
+    display: block;
+    background-color: #EEEEEE;
+}

@@ -1,0 +1,23 @@
+body {
+    background-color: #F0F5F4;
+}
+
+.container {
+    position: absolute;
+    top: 76px;
+    background-color: #fff;
+}
+
+
+.highlights-container {
+    width: 296px;
+    height: 400px;
+}
+
+.main-container {
+    width: 590px;
+}
+
+.ad-containner {    
+
+}
