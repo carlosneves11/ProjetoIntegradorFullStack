@@ -8,6 +8,15 @@ header {
     padding-top: 6px;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
+    z-index: 100;
+}
+.global-navbar {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
 }
 
 .logo {
