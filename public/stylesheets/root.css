@@ -1,3 +1,5 @@
 :root {
-    --text-color: #292929
+    --text-color: #292929;
+    --gray-white: #EEE;
+    --box-shadow-content: rgba(0, 0, 0, 0.4);
 }
