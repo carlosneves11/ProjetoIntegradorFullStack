@@ -1,9 +1,62 @@
+/* WRITE POST */
+.write {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    box-shadow: 0px 1px 2px var(--box-shadow-content);
+    padding: 18px 20px;
+}
+.avatar-user {
+    width: 38px; 
+    height: 38px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    background-color: var(--gray-white);
+    margin-bottom: 16px;
+}
+.avatar-user img {
+    width: 100%;
+}
+.write form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+}
+.write-box {
+    font-family: 'Inter', sans-serif;
+    resize: none;
+    padding: 10px;
+    width: 475px;
+    height: 80px;
+    border-radius: 6px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.write button {
+    height: 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #64CEBE;
+    border: none;
+    border-radius: 6px;
+}
+.write-image {
+    width: 38px;
+    height: 38px;
+    background-color:#eee;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* P O S T */
 .post {
     border-radius: 6px;
     box-shadow: 0px 1px 2px var(--box-shadow-content);
     margin-bottom: 16px;
 }
-
 .profile-post {
     display: flex;
     flex-direction: row;
@@ -40,6 +93,7 @@
     text-align: left;
 }
 
+
 /* CONTENT */
 .content-post { 
     background-color: #fff;
@@ -53,6 +107,7 @@
     text-align: justify;
 }
 
+
 /* IMAGE-POST */
 .image-post {
     background-color: #fff;
@@ -60,6 +115,7 @@
 .image-post img {
     width: 100%;
 }
+
 
 /* INTERACTIONS */
 .interactions-post {
@@ -75,6 +131,7 @@
     margin-left: 9px;
 }
 
+
 /* HORIZONTAL ROW */
 .hr-post {
     background-color: #fff;
@@ -85,6 +142,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     margin: 0 auto;
 }
+
 
 /* BUTTONS */
 .buttons-post {
@@ -101,6 +159,7 @@
     color: var(--text-color);
 }
 
+/* INTERACTIONS */
 .interactions {
     display: flex;
     flex-direction: row;
@@ -109,12 +168,10 @@
     align-items: center;
     justify-content: center;
 }
-
 .interactions:hover {
     background-color: rgba(0, 247, 255, 0.212);
     border-radius: 6px;
 }
-
 .interactions-icon img {
     width: 18px;
     height: 18px;
