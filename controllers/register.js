@@ -26,7 +26,7 @@ module.exports = (app) => {
                             phone: [],
                             location: []
                         }, 
-                        posts: {},
+                        posts: [],
                         jobs: {},
                         configurations: {
                             email: email.toLowerCase(),
@@ -34,7 +34,7 @@ module.exports = (app) => {
                             type: type,
                             theme: "light"
                         },
-                        email: emailtoLowerCase(), 
+                        email: email.toLowerCase(), 
                         notifications: {}
                     }
 
