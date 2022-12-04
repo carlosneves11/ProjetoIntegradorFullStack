@@ -33,5 +33,6 @@ consign({})
 // Start up server.
 app.listen(process.env.PORT, () => {
     console.log(`Server running at http://localhost:${process.env.PORT}`);
+    console.log(`Database https://cloud.mongodb.com/`)
 })
 console.log('CCSM Vagas')
