@@ -10,6 +10,7 @@ module.exports = (app) => {
             .then((user) => {
                 post = {
                     id_post: shortid(),
+                    id_user: id_user,
                     content: req.body.post_content,
                     image: "",
                     interactions: {
@@ -23,7 +24,7 @@ module.exports = (app) => {
                 user.posts.push(post)
 
                 register.findOneAndUpdate(
-                    {"_id": id_user}, 
+                    {id: id_user}, 
                     {posts: user.posts },
                     {upsert: true}, 
                     ()=>{}
