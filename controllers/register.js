@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const shortid = require('shortid')
 
 module.exports = (app) => {
     const RegisterController = {
@@ -14,6 +15,7 @@ module.exports = (app) => {
             .then((users) => { 
                 if (users == null) {
                     user = {
+                        id: shortid(),
                         profile: {
                             avatar_url: null,
                             name: name,
@@ -26,7 +28,7 @@ module.exports = (app) => {
                             phone: [],
                             location: []
                         }, 
-                        posts: {},
+                        posts: [],
                         jobs: {},
                         configurations: {
                             email: email.toLowerCase(),
@@ -34,7 +36,7 @@ module.exports = (app) => {
                             type: type,
                             theme: "light"
                         },
-                        email: emailtoLowerCase(), 
+                        email: email.toLowerCase(), 
                         notifications: {}
                     }
 

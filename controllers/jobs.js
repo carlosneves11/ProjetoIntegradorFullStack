@@ -4,8 +4,6 @@ module.exports = (app) =>  {
             res.render('jobs')
         }
     }
-     
-    return JobsController
-        
-    }
+    return JobsController   
+}
     

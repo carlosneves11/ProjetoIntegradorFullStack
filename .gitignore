@@ -2,3 +2,5 @@ node_modules
 esquemaBD.json
 .ENV
 teste.js
+teste.ejs
+esquema.json

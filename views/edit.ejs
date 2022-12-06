@@ -1,0 +1,44 @@
+
+<div class="edit_box bs br">
+    <div class="edit_close" onclick="close_edit('edit')">X</div>
+    <form action="" method="post" class="edit_form">
+        <div>
+            <span>Nome completo</span> <input type="text" disabled="true" class="name" value="<%= info_base.profile.name %>">
+        </div>
+        <div>
+            <span>Pronome</span> 
+            <select name="pronoun" id="">
+                <option value="">Selecione</option>
+                <option value="she">Ela, dela</option>
+                <option value="he">Ele, dele</option>
+                <option value="they">Elu, delu</option>
+                <option value="other">Outro</option>
+                <option value="none">Nenhum</option>
+            </select>
+        </div>
+        <div>
+            <span>Data de nascimento</span> <input type="date" name="birth" id="" value="<%= info_base.profile.birth %>">
+        </div>
+        <div id="edit_password">
+            <span>E-mail</span> <input type="email" name="email">
+            <span>Senha atual</span> <input type="password" name="oldpassword" required>
+            <span>Nova senha</span> <input type="password" name="password1">
+            <span>Repetir senha</span> <input type="password" name="password2">
+        </div>
+        <div>
+            <span>Posição atual</span> <input type="text" name="current_position" value="<%= info_base.profile.current_position %>">
+        </div>
+        <div>
+            <span>Organização</span> <input type="text" name="sector" value="<%= info_base.profile.sector %>">
+        </div>
+        <div>
+            <span>Telefone</span> <input type="tel" name="phone" value="<%= info_base.profile.phone %>">
+        </div>
+        <div>
+            <span>Localização</span> <input type="text" name="location" value="<%= info_base.profile.location %>">
+        </div>
+        <div>
+            <button id="edit_btn_submit" type="submit">Atualizar</button>
+        </div>
+    </form>
+</div>

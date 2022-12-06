@@ -3,9 +3,7 @@ const jwt = require('jsonwebtoken')
 module.exports = (req, res, next) => {
     try {
         const token = req.session.token
-
-        console.log(token)
-
+        
         if (token == undefined) {
             return res.status(401).redirect('/')
         }

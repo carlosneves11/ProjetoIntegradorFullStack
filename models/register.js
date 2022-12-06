@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 module.exports = () => {
     const registerModel = mongoose.model('Users', {
+        id: String,
         profile: Object,
         posts: Object,
         jobs: Object,   
