@@ -11,6 +11,7 @@ module.exports = (app) => {
                 post = {
                     id_post: shortid(),
                     id_user: id_user,
+                    username: user.profile.name,
                     content: req.body.post_content,
                     image: "",
                     interactions: {
