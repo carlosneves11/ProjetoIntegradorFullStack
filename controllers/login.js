@@ -21,7 +21,7 @@ module.exports = (app) => {
                     bcrypt.compare(password, user.configurations.password, (err, result) => {
                         if (result) {
                             const token = jwt.sign({
-                                id_user: user._id,
+                                id_user: user.id,
                                 email: user.email,
                                 auth: true,
                                 theme: user.configurations.theme

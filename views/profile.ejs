@@ -1,0 +1,122 @@
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/root.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/profile.css">
+
+    <title>Jobs | CCSM </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    </style>
+    <script src="js/post.js"></script>
+</head>
+<body>
+    <header>
+        <div class="global-navbar">
+            <a href="/jobs">
+                <div class="logo">
+                    <h1>CCSM</h1>
+                </div>
+            </a>
+            <nav>
+                <div>
+                    <a href="#">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/message.svg" class="messages-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/notification.svg" class="notifications-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="/profile">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/imagem_teste.jpg" class="profile-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav" id="small-elipse-profile">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="clear"></div>
+
+    <div class="content">
+        <div class="profile br bs">
+            <div class="bio bs br">
+                <div class="folder br">
+                        <div class="edit_btn" onclick="edit()"></div>
+                </div>
+                <div class="profile_bio">
+                    <div class="profile_avatar_big">
+                        <div id="avatar_button" onclick="button_avatar()"></div>
+                        <img src="/images/navbar/imagem_teste.jpg" class="avatar big" alt="">
+                    </div><!--Avatar-->
+                    <div class="details">
+                        <div class="text_details">
+                            <div class="nome">
+                                <%= info_base.profile.name %>
+                                <span class="pronoun"><%= info_base.profile.pronoun  %></span>
+                            </div>
+                            <div class="current_position">
+                                <%= info_base.profile.current_position  %>
+                            </div>
+                            <div class="location">
+                                <%= info_base.profile.location  %>
+                            </div>
+                        </div>
+                        <div class="organization">
+                            <div>
+                                <img src="/images/navbar/imagem_teste.jpg" class="_profile avatar ico" alt="">
+                            </div>
+                            <div class="text_organization"><%= info_base.profile.sector  %></div>
+                        </div>
+                    </div><!--Nome projeto empreesa local-->
+                </div>
+            </div>            
+            
+        </div>
+        <div class="aside">
+            <div class="aside_sticky bs br"></div>
+        </div>
+    </div>
+
+    <script>
+        function edit() {
+            var div = document.createElement('div');
+            div.id = 'edit'
+            document.body.appendChild(div);
+            
+            var div = document.createElement('div');
+            div.innerHTML = '<%- include("./edit").replace(/(\r\n|\n|\r)/gm, ""); %>'
+            document.getElementById('edit').appendChild(div);
+        }
+
+        function close_edit(id) {
+            document.getElementById(id).remove()
+        }
+
+        function button_avatar() {
+            var div = document.createElement('div');
+            div.className = 'Upload_avatar'
+            div.innerHTML = '<%- include("./upload_avatar").replace(/(\r\n|\n|\r)/gm, ""); %>'
+            document.getElementById('avatar_button').appendChild(div)
+        }
+    </script>
+</body>
+</html>
