@@ -1,13 +1,140 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs</title>
+    <link rel="stylesheet" href="stylesheets/reset.css">
+    <link rel="stylesheet" href="stylesheets/root.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/post.css">
+    <title>Jobs | CCSM </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    </style>
+    <script src="js/post.js"></script>
 </head>
 <body>
-    <h1>Sucesso</h1>
-    
+    <header>
+        <div class="global-navbar">
+            <div class="logo">
+                <h1>CCSM</h1>
+            </div>
+            <nav>
+                <div>
+                    <a href="#">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/message.svg" class="messages-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/notification.svg" class="notifications-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav"></div>
+                    </a>
+                </div>
+                <div>
+                    <a href="/profile">
+                        <div class="elipse-nav">
+                            <img src="images/navbar/imagem_teste.jpg" class="profile-nav" alt="">
+                        </div>
+                        <div class="small-elipse-nav" id="small-elipse-profile">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="clear"></div>
+
+    <div class="content">
+        <div class="sidebar">
+            <div class="sidebar_sticky br bs">
+            </div>
+        </div>
+        <div class="main">
+            <div class="write br bs">
+                <div class="options-write">
+                    <div class="avatar-user">
+                        <a href="/profile"><img src="images/navbar/imagem_teste.jpg" class="profile-nav" alt=""></a>
+                    </div>
+                    <div class="write-image">
+                        <img src="#" alt="">
+                    </div>
+                </div>
+                    <form action="/post" method="post">
+                        <textarea class="write-box" id="write-box" placeholder="No que você está pensando?" name="post_content"></textarea>
+                        <button type="submit">Publicar</button>
+                    </form>
+            </div>
+            <div id="postsMain">
+                <% allposts.posts.reverse().forEach((post) => { %>
+                    <div class="post br bs">
+                        <div class="profile-post">
+                            <div class="avatar-post">
+                            </div>
+                            <div class="text-profile-post">
+                                <h1><%- post.id_user %></h1>
+                                <span><%- post.createdAt %></span>
+                            </div>
+                        </div>
+                        <div class="content-post">
+                            <p>
+                                <%- post.content %>
+                            </p>
+                        </div>
+                        <div class="image-post">
+                            <img src="images/exemplo/google-sp.webp" alt="">
+                        </div>
+                        <div class="interactions-post">
+                            <span><%- post.interactions.likes %> Curtidas</span>
+                            <span><%- post.interactions.comments %> Comentários</span>
+                            <span><%- post.interactions.shared %> Compartilhamentos</span>
+                        </div>
+                        <div class="hr-post">
+                            <div class="hr2-post"></div>
+                        </div>
+                        <div class="buttons-post">
+                            <a href="#">
+                                <div class="interactions">
+                                    <div class="interactions-icon">
+                                        <img src="images/feed/like.svg" alt="">
+                                    </div>
+                                    Curtir
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="interactions">
+                                    <div class="interactions-icon">
+                                        <img src="images/feed/comment.svg" alt="">
+                                    </div>
+                                    Comentar
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="interactions">
+                                    <div class="interactions-icon">
+                                        <img src="images/feed/share.svg" alt="">
+                                    </div>
+                                    Compartilhar
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        <div class="aside">
+            <div class="aside_sticky br bs"></div>
+        </div>
+    </div>
+    <script>
+    </script>
 </body>
 </html>
