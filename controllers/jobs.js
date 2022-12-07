@@ -7,12 +7,16 @@ module.exports = (app) =>  {
             register.findOne({id: id_user})
             .then((user) => {
                 
+                let info_base = {
+                    profile: user.profile,
+                    posts: user.posts                    
+                }
                 let allposts = {
                     profile: user.profile,
                     posts: user.posts                    
                 }
 
-                res.render('jobs', {allposts})
+                res.render('jobs', {info_base, allposts})
             })
         }
     }

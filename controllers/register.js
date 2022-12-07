@@ -17,7 +17,7 @@ module.exports = (app) => {
                     user = {
                         id: shortid(),
                         profile: {
-                            avatar_url: null,
+                            avatar_url: "",
                             name: name,
                             birth: null,
                             email: null,

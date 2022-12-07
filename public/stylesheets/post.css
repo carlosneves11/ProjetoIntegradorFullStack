@@ -43,9 +43,12 @@
 .write-image {
     width: 38px;
     height: 38px;
-    background-color:#eee;
-    border-radius: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.write-image img {
+    position: relative;
+    top: 2px;
+    width: 100%;    
+    cursor: pointer;
 }
 
 
@@ -67,6 +70,11 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-right: 7px;
     background-color: var(--gray-white);
+}
+.avatar-post img {
+    width: 38px; 
+    height: 38px;
+    border-radius: 50%;
 }
 .text-profile-post {
     display: block;
