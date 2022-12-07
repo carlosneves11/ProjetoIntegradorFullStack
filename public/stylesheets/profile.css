@@ -156,9 +156,11 @@
     height: 20px;
     padding: 5px;
     border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05)
 }
 .edit_close:hover {
     cursor: pointer;
+    color: #58e1cc;
     background-color: rgba(0, 0, 0, 0.5)
 }
 .edit_box {
