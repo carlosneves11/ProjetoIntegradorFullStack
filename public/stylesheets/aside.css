@@ -1,0 +1,58 @@
+.aside_sticky {
+    padding: 18px 32px 25px 20px;
+}   
+.anuncio_box{
+    width: 100%;
+    display:flex;
+    flex-direction:row; 
+    margin:16px 0;
+
+}
+.anuncio_imagem{
+    
+    display: block;
+    width: 64px;
+    height: 64px;
+    min-width:64px;
+    margin-right:16px;
+}
+.anuncio_imagem img{
+    width: 64px;
+    height: 64px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    
+}
+.anuncio_conteudo p{
+    font-size:14px;
+    line-height:17px;
+    bottom: 0px;
+}
+.noticias h1{
+    margin-bottom: 17px;
+    margin-top: 26px;
+
+    
+}
+.noticias h1, .anuncio h1{
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.noticias_conteudo p{
+    font-size: 12px;
+    line-height:15px;
+    margin-bottom: 32px;
+
+}
+
+
+
+
+
+
+
