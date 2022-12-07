@@ -39,6 +39,10 @@
     background-color: #64CEBE;
     border: none;
     border-radius: 6px;
+    transition: 0.2s ease-out;
+}
+.write button:hover {
+    background-color: #36e0c7;
 }
 .write-image {
     width: 38px;
@@ -82,12 +86,12 @@
     height: 36px;
 }
 .text-profile-post h2 {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 600;
     line-height: 15px;
     letter-spacing: 0em;
     text-align: left;
-    padding: 2px 0px;
+    padding: 4px 0px;
 }
 .text-profile-post span {
     font-size: 12px;

@@ -13,8 +13,7 @@
 
     <title>Jobs | CCSM </title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jura:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jura:wght@700&display=swap');
     </style>
     <script src="js/post.js"></script>
 </head>
@@ -50,12 +49,16 @@
                                 <%= info_base.profile.location  %>
                             </div>
                         </div>
-                        <div class="organization">
-                            <div class="organization_icon">
-                                <img src="./images/profile/office.svg" class="_profile avatar ico" alt="">
+                        <a href="#" class="organization_link">
+                            <div class="organization">
+                                <div class="organization_icon">
+                                    <img src="./images/profile/office.svg" class="_profile avatar ico" alt="">
+                                </div>
+                                <div class="text_organization">
+                                        <%= info_base.profile.sector  %>
+                                </div>
                             </div>
-                            <div class="text_organization"><%= info_base.profile.sector  %></div>
-                        </div>
+                        </a>
                     </div><!--Nome projeto empreesa local-->
                 </div>
             </div>
