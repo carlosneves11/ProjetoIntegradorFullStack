@@ -10,63 +10,31 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/post.css">
    
+    <link rel="stylesheet" href="stylesheets/side.css">
     <title>Jobs | CCSM </title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Jura:wght@700&display=swap');
     </style>
     <script src="js/post.js"></script>
 </head>
 <body>
-    <header>
-        <div class="global-navbar">
-            <div class="logo">
-                <h1>CCSM</h1>
-            </div>
-            <nav>
-                <div>
-                    <a href="#">
-                        <div class="elipse-nav">
-                            <img src="images/navbar/message.svg" class="messages-nav" alt="">
-                        </div>
-                        <div class="small-elipse-nav"></div>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <div class="elipse-nav">
-                            <img src="images/navbar/notification.svg" class="notifications-nav" alt="">
-                        </div>
-                        <div class="small-elipse-nav"></div>
-                    </a>
-                </div>
-                <div>
-                    <a href="/profile">
-                        <div class="elipse-nav">
-                            <img src="images/navbar/imagem_teste.jpg" class="profile-nav" alt="">
-                        </div>
-                        <div class="small-elipse-nav" id="small-elipse-profile">
-                        </div>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <%- include("./part/header") %>
 
     <div class="clear"></div>
 
     <div class="content">
-        <div class="sidebar">
-            <div class="sidebar_sticky br bs">
-            </div>
-        </div>
+        <%- include("./part/side") %>
         <div class="main">
             <div class="write br bs">
                 <div class="options-write">
                     <div class="avatar-user">
-                        <a href="/profile"><img src="images/navbar/imagem_teste.jpg" class="profile-nav" alt=""></a>
+                        <a href="/profile">
+                            <img src="<%= info_base.profile.avatar_url %>" class="profile-nav" alt="">
+                        </a>
                     </div>
                     <div class="write-image">
-                        <img src="#" alt="">
+                        <img src="./images/feed/picture.svg" alt="">
                     </div>
                 </div>
                     <form action="/post" method="post">
@@ -79,9 +47,10 @@
                     <div class="post br bs">
                         <div class="profile-post">
                             <div class="avatar-post">
+                                <img src="<%- post.avatar_url %>" alt="">
                             </div>
                             <div class="text-profile-post">
-                                <h1><%- post.username %></h1>
+                                <h2><%- post.username %></h2>
                                 <span><%- post.createdAt %></span>
                             </div>
                         </div>
