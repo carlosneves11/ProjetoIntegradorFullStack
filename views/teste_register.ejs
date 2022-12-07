@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/register.css">
     <title>Cadastro</title>
-    <style>
-        span {
-            display: block;
-        }
-        input {
-            display: block;
-        }
-    </style>
 </head>
 <body>
-    <form action="/register" method="POST">
-        <span>Nome Completo</span>
-        <input type="text" name="name" placeholder="Digite seu nome completo" required>
-        <span>Email</span>
-        <input type="email" name="email" placeholder="Digite seu E-mail" required>
-        <span>Senha</span>
-        <input type="password" name="password" maxlength="64" minlenght="6" placeholder="Digite nova senha" required>
-        <input type="radio" name="type" value="personal" id="personal">
-        <span>Pessoal</span>
-        <input type="radio" name="type" value="bussiness" id="bussiness">
-        <span>Empresarial</span>
-        <button type="submit">Começar</button>
-        
-    </form>
+    <div class="login-page">
+        <div class="form">
+          <h1>Cadastre-se</h1>
+          <form action="/register" method="POST" class="login-form">
+            <input type="text" name="name" placeholder="Nome Completo" required/>
+            <input type="email" name="email" placeholder="email" required/>
+            <input type="password" name="password" placeholder="Senha" required/>
+            <br>
+            <label>Escolha seu perfil: </label>
+            <div class="campo">
+                
+              <div class="personal">
+                <input type="radio" name="type" value="personal" id="personal">
+                <span> Pessoal </span>
+              </div>
+          
+              <div class="business">
+                <input type="radio" name="type" value="bussiness" id="bussiness">
+                <span> Empresarial </span>
+              </div> 
+            </div>
+            
+            <button type="submit">Começar</button>
+          </form>
+        </div>
+      </div>
 </body>
 </html>

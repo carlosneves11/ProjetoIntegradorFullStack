@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/profile.css">
     <link rel="stylesheet" href="stylesheets/post.css">
+    <link rel="stylesheet" href="stylesheets/aside.css">
 
     <title>Jobs | CCSM </title>
     <style>
@@ -68,6 +69,7 @@
                     <div class="post br bs">
                         <div class="profile-post">
                             <div class="avatar-post">
+                                <img src="<%- post.avatar_url %>" alt="">
                             </div>
                             <div class="text-profile-post">
                                 <h1><%- post.username %></h1>
@@ -122,7 +124,7 @@
             
         </div>
         <div class="aside">
-            <div class="aside_sticky bs br"></div>
+            <%- include("./part/aside") %>
         </div>
     </div>
 

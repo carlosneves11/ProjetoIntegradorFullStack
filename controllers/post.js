@@ -8,6 +8,8 @@ module.exports = (app) => {
 
             register.findOne({id: id_user})
             .then((user) => {
+                data = new Date()
+
                 post = {
                     id_post: shortid(),
                     id_user: id_user,
@@ -21,7 +23,7 @@ module.exports = (app) => {
                         shared: 0
                     },
                     vagas: {},
-                    createdAt: new Date()
+                    createdAt: [data.getDate(), data.getMonth()+1, data.getFullYear()-100]
                 }
                 user.posts.push(post)
 
